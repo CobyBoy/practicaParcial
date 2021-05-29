@@ -4,12 +4,24 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBatalla;
+import ar.edu.unlam.pb2.eva03.model.Acuatico;
+import ar.edu.unlam.pb2.eva03.model.Anfibio;
+import ar.edu.unlam.pb2.eva03.model.Avion;
+import ar.edu.unlam.pb2.eva03.model.Camion;
+import ar.edu.unlam.pb2.eva03.model.Destructor;
+import ar.edu.unlam.pb2.eva03.model.HidroAvion;
+import ar.edu.unlam.pb2.eva03.model.Portaviones;
+import ar.edu.unlam.pb2.eva03.model.Submarino;
+import ar.edu.unlam.pb2.eva03.model.Tanque;
+import ar.edu.unlam.pb2.eva03.model.Terrestre;
+import ar.edu.unlam.pb2.eva03.model.Volador;
+
 public class Recuperatorio {
 
 	@Test
 	public void queSePuedaCrearUnObjetoVolador() {
 		Volador avion = new Avion(1, "A-10");
-	
 		assertEquals(0.0, avion.getAltura(), 0.01);
 	}
 	
@@ -18,7 +30,7 @@ public class Recuperatorio {
 		Terrestre tanque = new Tanque(5, "Renault FT");
 	
 		assertEquals(0.0, tanque.getVelocidad(), 0.1);
-	}
+		}
 	
 	@Test
 	public void queSePuedaCrearUnObjetoAcuatico() {
@@ -30,7 +42,7 @@ public class Recuperatorio {
 	@Test
 	public void queSePuedaCrearUnObjetoAnfibio() {
 		Anfibio var = new Anfibio(12, "LARC-5");
-	
+		var.getVelocidad();
 		assertEquals(0.0, var.getVelocidad(), 0.01);
 		assertEquals(0.0, var.getProfundidad(), 0.01);
 	}
@@ -61,7 +73,7 @@ public class Recuperatorio {
 		argentina.agregarVehiculo(new HidroAvion(12, "Mitsubishi F1M"));
 		argentina.agregarVehiculo(new Anfibio(12, "LARC-5"));
 		
-		assertEquals((Integer)12, argentina.getCapacidadDeDefensa());
+		assertEquals((Integer)13, argentina.getCapacidadDeDefensa());
 	}
 	
 	@Test
@@ -99,15 +111,14 @@ public class Recuperatorio {
 		argentina.agregarVehiculo(new Destructor(11, "A-10"));
 		argentina.agregarVehiculo(new HidroAvion(12, "A-10"));
 		argentina.agregarVehiculo(new Anfibio(13, "A-10"));
-		
 		argentina.crearBatalla("Pacifico", TipoDeBatalla.NAVAL, 200.5, 45.8);
 
 		assertTrue(argentina.enviarALaBatalla("Pacifico", 8));
 		assertTrue(argentina.enviarALaBatalla("Pacifico", 9));
-		assertTrue(argentina.enviarALaBatalla("Pacifico", 10));		
-		assertTrue(argentina.enviarALaBatalla("Pacifico", 11));		
-		assertTrue(argentina.enviarALaBatalla("Pacifico", 12));		
-		assertTrue(argentina.enviarALaBatalla("Pacifico", 13));		
+		assertTrue(argentina.enviarALaBatalla("Pacifico", 10));
+		assertTrue(argentina.enviarALaBatalla("Pacifico", 11));
+		assertTrue(argentina.enviarALaBatalla("Pacifico", 12));
+		assertTrue(argentina.enviarALaBatalla("Pacifico", 13));
 	}
 
 	@Test 
