@@ -11,6 +11,7 @@ public class Volador extends Vehiculo implements IVolador{
 		this.altura = 0.0;
 	}
 
+	@Override
 	public Double getAltura() {
 		return altura;
 	}

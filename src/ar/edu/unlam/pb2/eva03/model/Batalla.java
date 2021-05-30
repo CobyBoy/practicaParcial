@@ -1,9 +1,8 @@
-package ar.edu.unlam.pb2.eva03;
+package ar.edu.unlam.pb2.eva03.model;
 
 import java.util.*;
 
 import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBatalla;
-import ar.edu.unlam.pb2.eva03.model.Vehiculo;
 
 public class Batalla {
 	private Double latitud;
@@ -88,6 +87,10 @@ public class Batalla {
 		} else if (!nombre.equals(other.nombre))
 			return false;
 		return true;
+	}
+
+	public void agregarVehiculoABatalla(Vehiculo vehiculoEnConvoy) {
+		this.vehiculosEnLaBatalla.add(vehiculoEnConvoy);
 	};
 	
 }
