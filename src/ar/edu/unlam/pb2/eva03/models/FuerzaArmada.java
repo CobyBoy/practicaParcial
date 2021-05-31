@@ -1,9 +1,9 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeBatalla;
+import ar.edu.unlam.pb2.eva03.enums.TipoDeBatalla;
 
 public class FuerzaArmada {
 

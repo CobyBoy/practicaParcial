@@ -1,6 +1,6 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeVehiculo;
+import ar.edu.unlam.pb2.eva03.enums.TipoDeVehiculo;
 import ar.edu.unlam.pb2.eva03.interfaces.IVolador;
 
 public class Volador extends Vehiculo implements IVolador{
@@ -20,6 +20,11 @@ public class Volador extends Vehiculo implements IVolador{
 	public String getTipoDeVehiculo() {
 		// TODO Auto-generated method stub
 		return TipoDeVehiculo.VOLADOR.getTipoDeVehiculo();
+	}
+
+	@Override
+	public int compareTo(Vehiculo vehiculo) {
+		return Integer.valueOf(this.id).compareTo(vehiculo.getId());
 	}
 
 }

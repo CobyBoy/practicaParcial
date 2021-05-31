@@ -1,5 +1,6 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
+import ar.edu.unlam.pb2.eva03.enums.TipoDeVehiculo;
 import ar.edu.unlam.pb2.eva03.interfaces.ITerrestre;
 
 public class Anfibio extends Acuatico implements ITerrestre{
@@ -16,5 +17,4 @@ public class Anfibio extends Acuatico implements ITerrestre{
 		// TODO Auto-generated method stub
 		return velocidad;
 	}
-
 }

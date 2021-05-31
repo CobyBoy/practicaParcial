@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
 public class Avion extends Volador {
 

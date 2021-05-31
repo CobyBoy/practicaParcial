@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.eva03.enumeradores;
+package ar.edu.unlam.pb2.eva03.enums;
 
 public enum TipoDeVehiculo {
 	ACUATICO("NAVAL"),
@@ -10,6 +10,7 @@ public enum TipoDeVehiculo {
 	TipoDeVehiculo(String tipo) {
 		this.tipo = tipo;
 	};
+	
 	
 	public String getTipoDeVehiculo() {
 		return tipo;

@@ -1,8 +1,8 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
-public abstract class Vehiculo {
-	private Integer id;
-	private String nombreDeModelo;
+public abstract class Vehiculo implements Comparable<Vehiculo>{
+	protected Integer id;
+	protected String nombreDeModelo;
 	
 	public Vehiculo(Integer id, String nombreDeModelo) {
 		this.id = id;

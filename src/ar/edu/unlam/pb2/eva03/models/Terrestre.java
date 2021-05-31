@@ -1,6 +1,6 @@
-package ar.edu.unlam.pb2.eva03.model;
+package ar.edu.unlam.pb2.eva03.models;
 
-import ar.edu.unlam.pb2.eva03.enumeradores.TipoDeVehiculo;
+import ar.edu.unlam.pb2.eva03.enums.TipoDeVehiculo;
 import ar.edu.unlam.pb2.eva03.interfaces.ITerrestre;
 
 public class Terrestre extends Vehiculo implements ITerrestre{
@@ -25,6 +25,13 @@ public class Terrestre extends Vehiculo implements ITerrestre{
 	public Double getVelocidad() {
 		// TODO Auto-generated method stub
 		return velocidad;
+	}
+
+
+
+	@Override
+	public int compareTo(Vehiculo vehiculo) {
+		return Integer.valueOf(this.id).compareTo(vehiculo.getId());
 	}
 
 }
